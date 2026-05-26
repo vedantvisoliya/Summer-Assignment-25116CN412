@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int num, digit, sum = 0, temp;
-    printf("Enter a number to find the sum of its digits: ");
+    int num, temp, digits = 0;
+    printf("Enter a number whose digit you want to count: ");
     scanf("%d", &num);
 
     temp = num;
 
     while (temp != 0) {
-        digit = temp % 10;
-        sum += digit;
+        digits++;
         temp /= 10;
     }
 
-    printf("Sum of digits of %d is: %d", num, sum);
+    printf("Number of digits in %d is %d", num, digits);
+
     return 0;
 }
